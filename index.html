@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="wrapper">
+        <p id="header">点数計算</p>
+        <div id="calc">
+            <div class="result">
+                <input readonly id="result" type="text" value="0">
+                <button onclick="c_click()">C</button>
+            </div>
+            <div id="num">
+                <button onclick="num_click(this.innerHTML)">☆<div>(星)</div></button>
+                <button onclick="num_click(this.innerHTML)">○<div>(丸)</div></button>
+                <button onclick="num_click(this.innerHTML)">♡<div>(ハート)</div></button>
+            </div>
+            <div id="num">
+                <button onclick="num_click(this.innerHTML)">☓<div>(失敗)</div></button>
+                <button onclick="num_click(this.innerHTML)">△<div>(三角)</div></button>
+                <button onclick="num_click(this.innerHTML)">◇<div>(ひし形)</div></button>
+                <button onclick="num_click(this.innerHTML)">□<div>(四角)</div></button>
+            </div>
+        </div>
+  </body>
+
+</html>
