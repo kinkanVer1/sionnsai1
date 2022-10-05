@@ -4,7 +4,61 @@
 <head>
     <meta charset="UTF-8">
 </head>
+    <style>
+        @charset "utf-8";
 
+/*全体*/
+.wrapper {
+    max-width: 350px;
+    max-height: 350px;
+    margin: auto;
+    color: #A9A9A9;
+}
+#header,
+#calc {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/*ヘッダー*/
+#header {
+    font-size: 24px;
+    padding: 1rem;
+}
+
+/*テキスト*/
+input {
+    box-sizing: border-box;
+    width: 75%;
+    height: 3.5rem;
+    font-size: 1.6rem;
+    text-align: right;
+    padding: 0.75rem;
+}
+
+/*ボタン関係*/
+button {
+    font-size: 18px;
+    width: 30%;
+    height: 3.5rem;
+    color: #333;
+    vertical-align: middle;
+    border-color: #fff;
+}
+
+button:hover {
+    background-color: #7FFFD4;
+}
+
+/*上*/
+.result {
+    display: flex;
+  padding: 10px;
+ }
+.result input:first-of-type{
+    margin-right: 0.75rem;
+}
+    </style>
 <body>
     <div class="wrapper">
         <p id="header">点数計算</p>
@@ -15,11 +69,11 @@
             </div>
             <div id="num">
                 <button onclick="num_click(this.innerHTML)">☆<div>(星)</div></button>
-                <button onclick="num_click(this.innerHTML)">○<div>(丸)</div></button>
+                <button onclick="num_click(this.innerHTML)">◎<div>(丸)</div></button>
                 <button onclick="num_click(this.innerHTML)">♡<div>(ハート)</div></button>
             </div>
             <div id="num">
-                <button onclick="num_click(this.innerHTML)">☓<div>(失敗)</div></button>
+                <button onclick="num_click(this.innerHTML)">X<div>(失敗)</div></button>
                 <button onclick="num_click(this.innerHTML)">△<div>(三角)</div></button>
                 <button onclick="num_click(this.innerHTML)">◇<div>(ひし形)</div></button>
                 <button onclick="num_click(this.innerHTML)">□<div>(四角)</div></button>
