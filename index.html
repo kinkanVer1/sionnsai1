@@ -4,77 +4,68 @@
 <head>
     <meta charset="UTF-8">
 </head>
-    <style>
-        @charset "utf-8";
+<style>
+    @charset "utf-8";
 
-/*全体*/
-.wrapper {
-    max-width: 350px;
-    max-height: 350px;
-    margin: auto;
-    color: #A9A9A9;
-}
-#header,
-#calc {
-    box-sizing: border-box;
-    text-align: center;
-}
+    /*全体*/
+    .wrapper {
+        max-width: 350px;
+        max-height: 350px;
+        margin: auto;
+        color: #A9A9A9;
+    }
 
-/*ヘッダー*/
-#header {
-    font-size: 24px;
-    padding: 1rem;
-}
+    #header,
+    #calc {
+        box-sizing: border-box;
+        text-align: center;
+    }
 
-/*テキスト*/
-input {
-    box-sizing: border-box;
-    width: 75%;
-    height: 3.5rem;
-    font-size: 1.6rem;
-    text-align: right;
-    padding: 0.75rem;
-}
+    /*ヘッダー*/
+    #header {
+        font-size: 24px;
+        padding: 1rem;
+    }
 
-/*ボタン関係*/
-button {
-    font-size: 18px;
-    width: 30%;
-    height: 3.5rem;
-    color: #333;
-    vertical-align: middle;
-    border-color: #fff;
-}
+    /*テキスト*/
+    input {
+        box-sizing: border-box;
+        width: 75%;
+        height: 3.5rem;
+        font-size: 1.6rem;
+        text-align: right;
+        padding: 0.75rem;
+    }
 
-button:hover {
-    background-color: #7FFFD4;
-}
+    /*ボタン関係*/
+    button {
+        font-size: 18px;
+        width: 30%;
+        height: 3.5rem;
+        color: #333;
+        vertical-align: middle;
+        border-color: #fff;
+        background-color: #87CEEB;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        border-radius: 5px;
+    }
 
-/*上*/
-.result {
-    display: flex;
-  padding: 10px;
- }
-.result input:first-of-type{
-    margin-right: 0.75rem;
-}
-        /*ボタンCSS*/
-        button {
-  color: #fff;
-  background-color: #eb6100;
-  border-bottom: 3px solid #b84c00;
-}
-button:hover {
-  margin-top: 3px;
-  color: #fff;
-  background: #f56500;
-  border-bottom: 2px solid #b84c00;
-}
-button :shadow {
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-}
-    </style>
+    button:hover {
+        background-color: #7FFFD4;
+    }
+
+    /*上*/
+    .result {
+        display: flex;
+        padding: 10px;
+    }
+
+    .result input:first-of-type {
+        margin-right: 0.75rem;
+    }
+</style>
+
 <body>
     <div class="wrapper">
         <p id="header">点数計算</p>
@@ -95,6 +86,6 @@ button :shadow {
                 <button onclick="num_click(this.innerHTML)">□<div>(四角)</div></button>
             </div>
         </div>
-  </body>
+</body>
 
 </html>
