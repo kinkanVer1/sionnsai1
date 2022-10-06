@@ -1,91 +1,51 @@
+
 <!DOCTYPE html>
-<html lang="ja">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-</head>
+<meta charset="utf-8">
 <style>
-    @charset "utf-8";
-
-    /*全体*/
-    .wrapper {
-        max-width: 350px;
-        max-height: 350px;
-        margin: auto;
-        color: #A9A9A9;
-    }
-
-    #header,
-    #calc {
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    /*ヘッダー*/
-    #header {
-        font-size: 24px;
-        padding: 1rem;
-    }
-
-    /*テキスト*/
-    input {
-        box-sizing: border-box;
-        width: 75%;
-        height: 3.5rem;
-        font-size: 1.6rem;
-        text-align: right;
-        padding: 0.75rem;
-    }
-
-    /*ボタン関係*/
-    button {
-        font-size: 18px;
-        width: 30%;
-        height: 3.5rem;
-        color: #333;
-        vertical-align: middle;
-        border-color: #fff;
-        background-color: #87CEEB;
-        -webkit-border-radius: 9px;
-        -moz-border-radius: 9px;
-        border-radius: 5px;
-    }
-
-    button:hover {
-        background-color: #7FFFD4;
-    }
-
-    /*上*/
-    .result {
-        display: flex;
-        padding: 10px;
-    }
-
-    .result input:first-of-type {
-        margin-right: 0.75rem;
-    }
+div{ display:flex; justify-content: center; width:320px; margin:4px auto; gap:8px; }
+button{ width:100px; height:4em; background: #9ce; }
+#result{ width:190px; text-align: right; padding-right: 10px;}
 </style>
-
+</head>
 <body>
-    <div class="wrapper">
-        <p id="header">点数計算</p>
-        <div id="calc">
-            <div class="result">
-                <input readonly id="result" type="text" value="0">
-                <button onclick="c_click()">C</button>
-            </div>
-            <div id="num">
-                <button onclick="num_click(this.innerHTML)">☆<div>(星)</div></button>
-                <button onclick="num_click(this.innerHTML)">◎<div>(丸)</div></button>
-                <button onclick="num_click(this.innerHTML)">♡<div>(ハート)</div></button>
-            </div>
-            <div id="num">
-                <button onclick="num_click(this.innerHTML)">△<div>(三角)</div></button>
-                <button onclick="num_click(this.innerHTML)">◇<div>(ひし形)</div></button>
-                <button onclick="num_click(this.innerHTML)">□<div>(四角)</div></button>
-                <button onclick="num_click(this.innerHTML)">X<div>(失敗)</div></button>
-            </div> 
-        </div>
-</body>
+<div>
+<input type="text" id="result" value="0">
+<button type="button" onclick="reset()">C</button>
+</div>
+<div>
+<button type="button" onclick="add(10)">☆<br>(星)</button>
+<button type="button" onclick="add(20)">◎<br>(丸)</button>
+<button type="button" onclick="add(30)">♡<br>(ハート)</button>
+</div>
+<div>
+<button type="button" onclick="add(40)">△<br>(三角)</button>
+<button type="button" onclick="add(50)">◇<br>(ひし形)</button>
+<button type="button" onclick="add(60)">□<br>(四角)</button>
+</div>
+<div>
+<button type="button" onclick="edit()">Ｘ<br>(失敗)</button>
+</div>
+<script>
+let vl = 0, nm;
+const result = document.getElementById("result");
+var chk = 0;
 
+function edit() {
+vl -= nm;
+result.value = vl;
+}
+
+function add(nn) {
+nm = nn;
+vl += nm;
+result.value = vl;
+}
+
+function reset() {
+vl = 0; result.value = vl;
+}
+</script>
+</body>
 </html>
